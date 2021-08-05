@@ -3,7 +3,7 @@ package Sorting;
 import java.util.Scanner;
 
 public class Insertion_sort {
-	static void sort(int[] arr) {
+	static void insertion_sort(int[] arr) {
 		int n = arr.length;
 		for(int i = 1; i<n; i++) {
 			int value = arr[i];
@@ -35,7 +35,7 @@ public class Insertion_sort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] array = inputArray();
-		sort(array);
+		insertion_sort(array);
 		printArray(array);
 	}
 
