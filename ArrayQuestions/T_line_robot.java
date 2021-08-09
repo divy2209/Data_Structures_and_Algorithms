@@ -6,8 +6,8 @@ import java.util.Scanner;
 // Robot can only move in right or down direction, how many possible moves.
 public class T_line_robot {
 	static int total_T_LineMoves(int x, int y) {
-		int sum = x+y;
-		int steps = factorial(sum)/factorial(x)/factorial(y);
+		int sum = x+y; // sum is the row number in which we will find the total steps in pascal's triangle
+		int steps = factorial(sum)/factorial(x)/factorial(y); // Formula to find the number, sum of the numbers in sum-1th row at x and y positions
 		return steps;
 	}
 	static int factorial(int num) {
