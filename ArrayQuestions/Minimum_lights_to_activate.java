@@ -16,7 +16,7 @@ public class Minimum_lights_to_activate {
 	        // we start observing from left to right in the array
 	        // Find the left most possible place which can be li by the light at position i
 	        // siminarly find he rightmost place which can be lit by light at this place i
-	        int left = i+1-B  <  0?0 : i+1-B;
+	        start = i+1-B  <  0?0 : i+1-B;
 	        int right = i-1+B > A.size()-1 ? A.size()-1 : i-1+B;
 	        
 	        
