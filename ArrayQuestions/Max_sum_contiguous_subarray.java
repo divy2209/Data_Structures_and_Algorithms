@@ -3,7 +3,7 @@ package ArrayQuestions;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Max_sum_contigous_subarray {
+public class Max_sum_contiguous_subarray {
 	static int maxSumSubarray(ArrayList<Integer> A) {
 		int sum = 0, fsum = Integer.MIN_VALUE;
         for(int i = 0; i<A.size(); i++){
