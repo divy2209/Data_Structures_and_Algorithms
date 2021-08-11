@@ -63,13 +63,15 @@ public class Merge_intervals {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<Interval> intervals = Input();
-		print(intervals);
 		System.out.println("merge interval");
+		
 		Interval newInterval = new Interval();
 		newInterval.start = scan.nextInt();
 		newInterval.end = scan.nextInt();
+		
 		intervals = merge(intervals, newInterval);
 		scan.close();
+		
 		print(intervals);
 	}
 
