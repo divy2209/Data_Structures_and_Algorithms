@@ -2,6 +2,8 @@ package ArrayQuestions;
 
 import java.util.Scanner;
 
+//http://www.mathematische-basteleien.de/taxicabgeometry.htm
+
 // A robot is placed in a array at 0,0 and have to move at the end(final size) of the array.
 // Robot can only move in right or down direction, how many possible moves.
 public class T_line_robot {

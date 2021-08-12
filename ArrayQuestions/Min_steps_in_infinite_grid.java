@@ -3,6 +3,8 @@ package ArrayQuestions;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//http://www.mathematische-basteleien.de/taxicabgeometry.htm
+
 public class Min_steps_in_infinite_grid {
 	static Scanner scan = new Scanner(System.in);
 	static int minSteps(ArrayList<Integer> A, ArrayList<Integer> B) {
