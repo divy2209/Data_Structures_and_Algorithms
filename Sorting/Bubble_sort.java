@@ -5,15 +5,16 @@ import java.util.Scanner;
 public class Bubble_sort {
 	static void bubble_sort(int[] arr) {
 		int l = arr.length;
-		Boolean notSorted = true;
-		while(notSorted) {
-			notSorted = false;
-			for(int i = 0; i<l-1; i++) {
+		int end = l-1;
+		while(end>0) {
+			int j = 0;
+			for(int i = 0; i<end; i++) {
 				if(arr[i]>arr[i+1]) {
 					swap(arr, i, i+1);
-					notSorted = true;
+					j = i+1;
 				}
 			}
+			end = j;
 		}
 	}
 	
