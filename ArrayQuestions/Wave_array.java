@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+// https://www.youtube.com/watch?v=XAbG2Bjs6NA
 public class Wave_array {
 	static void waveSort(ArrayList<Integer> A) {
 		Collections.sort(A);

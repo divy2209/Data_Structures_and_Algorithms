@@ -6,10 +6,20 @@ import java.util.Scanner;
 
 // A robot is placed in a array at 0,0 and have to move at the end(final size) of the array.
 // Robot can only move in right or down direction, how many possible moves.
+
+// https://www.youtube.com/watch?v=t_f0nwwdg5o
+// Unique paths-Maths
+
 public class T_line_robot {
+	// At each point we have 2 choices, and the number of downs and rights are fixed to reach the final point.
+	// Now we just have to just choose number of downs or right, that's all. sumCdown or sumCright, that's what fibonnaci is
 	static int total_T_LineMoves(int x, int y) {
-		int sum = x+y; // sum is the row number in which we will find the total steps in pascal's triangle
-		int steps = factorial(sum)/factorial(x)/factorial(y); // Formula to find the number, sum of the numbers in sum-1th row at x and y positions
+		int sum = x+y;
+		int k = Math.max(x, y);
+		int steps = 1;
+		for(int i = 0; i<k; i++) {
+			steps = steps*(sum-i)/(i+1);
+		}
 		return steps;
 	}
 	static int factorial(int num) {
