@@ -8,28 +8,46 @@ import LinkedListQuestions.ListNode.Node;
 public class Add_two_numbers_as_lists {
 	static Scanner scan = new Scanner(System.in);
 	static Node<Integer> addNumbers(Node<Integer> head1, Node<Integer> head2){
-		int carry = 0, num1 = 0, num2 = 0;
+		int carry = 0;
+		//int num1 = 0, num2 = 0;
 		Node<Integer> result = new Node<Integer>(0);
 		Node<Integer> temp = result;
 		while(head1!=null || head2!=null || carry != 0) {
+			int sum = 0;
 			if(head1!=null) {
-				num1 = head1.data;
+				sum += head1.data;
+				//num1 = head1.data;
 				head1 = head1.next;
 			}
-			else num1 = 0;
+			//else num1 = 0;
 			
 			if(head2!=null) {
-				num2 = head2.data;
+				sum += head2.data;
+				//num2 = head2.data;
 				head2 = head2.next;
 			}
-			else num2 = 0;
+			//else num2 = 0;
 			
-			int sum = num1+num2+carry;
+			//int sum = num1+num2+carry;
+			sum += carry;
 			carry = sum/10;
 			result.next = new Node<Integer>(sum%10);
 			result = result.next;
 		}
-		return temp.next;
+		temp = reverseList(temp.next);
+		while(temp!=null && temp.data==0) temp = temp.next;
+		temp = reverseList(temp);
+		return temp;
+	}
+	static Node<Integer> reverseList(Node<Integer> head){
+		Node<Integer> curr = head, next = null, prev = null;
+		while(curr!=null) {
+			next = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+		return prev;
 	}
 	static ListNode<Integer> input(){
 		int n = scan.nextInt();
